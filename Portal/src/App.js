@@ -4,6 +4,7 @@ import P1 from "./Pages/p1/p1";
 import P2 from "./Pages/p2/p2";
 import "./index";
 import "./App.css";
+import AuthPage from "./Pages/Auth/AuthPage";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Router>
         <ul className="NavBar">
           <li>
-            <Link to="/p1">P1</Link>
+            <Link to="/login">P1</Link>
           </li>
           <li>
             <Link to="/p2">P2</Link>
@@ -23,7 +24,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/login" component={P1} />
+          <Route path="/login" component={AuthPage} />
           <Route path="/cards" component={P2} />
         </Switch>
       </Router>
