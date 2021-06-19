@@ -19,6 +19,9 @@ function AuthPage() {
                 <Link to="/pages/dashboard" className="auth-page__button">
                     Login
                 </Link>
+                <div className="auth-page__toggler">
+                    <span>password</span>&nbsp;| <span>Register</span>
+                </div>
             </div>
         </div>
     )
