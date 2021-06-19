@@ -16,7 +16,7 @@ function AuthPage() {
                     placeholder="*******"
                     type="password"
                 ></input>
-                <Link to="/pages/dashboard" className="auth-page__button">
+                <Link to="/dashboard" className="auth-page__button">
                     Login
                 </Link>
                 <div className="auth-page__toggler">
