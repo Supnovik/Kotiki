@@ -1,15 +1,20 @@
-import React from "react";
+import React from 'react'
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
-import "./index";
-import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+import AuthPage from './Pages/Auth/AuthPage'
+import MainPage from './Pages/Main/MainPage'
+
+import './App.css'
 
 function App() {
-  return (
-    <div className="app">
-      <Navbar></Navbar>
-    </div>
-  );
+    return (
+        <Router className="app">
+            <Switch>
+                <Route exact path="/" component={MainPage} />
+                <Route path="/login" component={AuthPage} />
+            </Switch>
+        </Router>
+    )
 }
 
-export default App;
+export default App
