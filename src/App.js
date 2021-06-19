@@ -31,7 +31,7 @@ function App() {
 }
 
 function Home() {
-  return <div></div>;
+  return <div className="middle"> </div>;
 }
 
 export default App;
