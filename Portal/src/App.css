@@ -23,22 +23,31 @@
   grid-area: nav;
   list-style-type: none;
 }
+
+.Login {
+  width: 120px;
+}
+.Contact {
+  width: 120px;
+}
+
+.How {
+  width: 200px;
+}
+
 .NavBar li {
   float: right;
 }
+
 .NavBar li a {
   display: block;
   color: white;
   text-align: center;
-  height: 60px;
-  width: 60px;
+  height: 120px;
+
+  font-size: 150%;
   text-decoration: none;
   list-style-type: none;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.NavBar li a:hover {
-  background-color: rgb(0, 0, 0);
-  opacity: 1;
 }
 
 .Logo {
@@ -51,6 +60,9 @@
   margin-left: 200px;
   margin-top: 0;
   padding: 0;
+  background-image: url("./main.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   list-style-type: none;
 }
 
@@ -62,11 +74,13 @@
   display: block;
   color: white;
   text-align: center;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 200px;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
-  background-color: aqua;
-  background-size: 80%;
+  background-image: url("./Kotiki.png");
+  background-size: 100%;
   background-repeat: no-repeat;
   opacity: 0.7;
 }
