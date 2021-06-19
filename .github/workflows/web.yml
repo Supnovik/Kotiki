@@ -15,15 +15,15 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install Packages
-      run: npm install
-    - name: Build page
-      run: npm run build
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Packages
+        run: npm install
+      - name: Build page
+        run: npm run build
 
   docker:
     needs: [build]
@@ -37,11 +37,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
-      - name:
-          Build and push Docker images
+      - name: Build and push Docker images
         uses: docker/build-push-action@v2.3.0
         with:
           context: ./Portal
           file: ./Portal/Dockerfile
-          tags: <ссылка на реп>
+          tags: supnovik/kotiki:latest
           push: true
