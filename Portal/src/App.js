@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import P1 from "./Pages/p1/p1";
 import P2 from "./Pages/p2/p2";
 import "./index";
+import "./App.css";
 
 function App() {
   return (
@@ -31,7 +32,11 @@ function App() {
 }
 
 function Home() {
-  return <div className="middle"> </div>;
+  return (
+    <div className="Middle">
+      <p1>Тут ваш заголовок</p1>
+    </div>
+  );
 }
 
 export default App;
