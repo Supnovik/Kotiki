@@ -10,7 +10,6 @@
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 600;
 
-    color: #686868;
     font-size: 14px;
 }
 
@@ -18,6 +17,12 @@
     display: grid;
     column-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    #back-arrow {
+        margin-top: 40px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
 
     &__investment {
         align-self: center;
@@ -47,6 +52,7 @@
 
         &-subtitle {
             @include font-date();
+            color: #686868;
         }
     }
 
@@ -78,6 +84,7 @@
 
         &-subtitle {
             @include font-date();
+            color: #686868;
         }
     }
 
@@ -96,7 +103,15 @@
         }
 
         &-one {
-            border: 1px solid grey;
+            border: 1px solid #686868;
+            &.red {
+                color: red;
+            }
+
+            &.green {
+                color: green;
+            }
+
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
@@ -110,6 +125,11 @@
             }
 
             &-date {
+                @include font-date();
+                color: #686868;
+            }
+
+            &-value {
                 @include font-date();
             }
         }

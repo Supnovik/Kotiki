@@ -1,8 +1,10 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
+import { useHistory } from 'react-router-dom'
 
 import PieChartSvg from '../../../../assets/svg/pie-chart.svg'
 import CoinSvg from '../../../../assets/svg/coin.svg'
+import BackArrow from '../../../../assets/svg/arrow-back.svg'
 
 import './CompanyPage.scss'
 
@@ -49,8 +51,15 @@ function CompanyPage() {
         },
     ]
 
+    let history = useHistory()
+
+    function goBack() {
+        history.push('/dashboard/companies')
+    }
+
     return (
         <div className="company-page">
+            <img id="back-arrow" src={BackArrow} onClick={goBack}></img>
             <div className="company-page__activity">
                 <div className="company-page__activity-title">
                     Recent activity
@@ -58,7 +67,11 @@ function CompanyPage() {
                 <div className="company-page__activities">
                     {activities.map((activity) => {
                         return (
-                            <div className="company-page__activity-one">
+                            <div
+                                className={`company-page__activity-one ${
+                                    activity.value > 0 ? 'green' : 'red'
+                                }`}
+                            >
                                 <div>
                                     <div className="company-page__activity-one-user">
                                         {activity.name}
