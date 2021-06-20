@@ -1,6 +1,7 @@
 .main-page {
     height: 100vh;
-
+    padding-right: 150px;
+    padding-left: 150px;
     background: linear-gradient(30deg, #825cf2, #5c75f1);
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
@@ -16,12 +17,14 @@
         font-weight: 400;
         font-size: 20px;
         text-shadow: 1px 1px 0 black;
+        color: white;
     }
 
     &__title {
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 600;
         font-size: 50px;
+        color: white;
 
         margin-bottom: 20px;
     }
@@ -29,6 +32,18 @@
     &__subtitle {
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 500;
+        color: white;
         font-size: 35px;
+    }
+
+    button {
+        background: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+        height: 70%;
+        align-self: center;
+
+        border: 1px solid white;
     }
 }

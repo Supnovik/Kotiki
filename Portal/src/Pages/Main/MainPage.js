@@ -17,7 +17,7 @@ function MainPage() {
             </Link>
             <button>
                 <Link to="/Login" className="main-page__nav-item">
-                    Login
+                    Login!
                 </Link>
             </button>
 

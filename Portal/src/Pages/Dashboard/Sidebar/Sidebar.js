@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Sidebar.scss'
 import HomeSvg from '../../../assets/svg/home.svg'
+import FactorySvg from '../../../assets/svg/factory.svg'
+import PeopleSvg from '../../../assets/svg/group.svg'
 import LogoutSvg from '../../../assets/svg/logout.svg'
 
 function Sidebar() {
@@ -12,10 +14,10 @@ function Sidebar() {
             </Link>
             <div className="sidebar-items">
                 <Link to="/dashboard">
-                    <img className="sidebar-item" src={HomeSvg}></img>
+                    <img className="sidebar-item" src={FactorySvg}></img>
                 </Link>
                 <Link to="/dashboard/company">
-                    <img className="sidebar-item" src={HomeSvg}></img>
+                    <img className="sidebar-item" src={PeopleSvg}></img>
                 </Link>
             </div>
             <Link to="/">
