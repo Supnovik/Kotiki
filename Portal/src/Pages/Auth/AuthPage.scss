@@ -1,0 +1,94 @@
+@mixin font-input {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+
+    color: white;
+    font-size: 15px;
+}
+
+@mixin font-title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: white;
+    font-size: 90px;
+}
+
+.auth-page {
+    background: linear-gradient(30deg, #825cf2, #5c75f1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__form {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @include font-title();
+    }
+
+    input {
+        border-radius: 15px;
+        border: 3px solid white;
+
+        @include font-input();
+
+        width: 60%;
+        min-height: 30px;
+        outline: none;
+        text-align: center;
+        background-color: transparent;
+
+        margin-bottom: 20px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        cursor: pointer;
+
+        width: 60%;
+        min-height: 30px;
+
+        border-radius: 15px;
+        border: 3px solid white;
+
+        color: #fff;
+        @include font-input();
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+        }
+
+        margin-bottom: 5px;
+    }
+
+    &__toggler {
+        @include font-input();
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
